@@ -1,0 +1,249 @@
+/* Importación de la fuente Dosis de Google Fonts con pesos desde 200 (extra ligera) hasta 800 (extra negrita) */
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap");
+
+/* Reset universal: aplica a todos los elementos */
+* {
+  font-family: "Dosis", sans-serif; /* Establece Dosis como fuente principal */
+  margin: 0; /* Elimina márgenes predeterminados */
+  padding: 0; /* Elimina paddings predeterminados */
+  box-sizing: border-box; /* Incluye padding y border en el cálculo de dimensiones */
+}
+
+/* Estilos para el cuerpo del documento */
+body {
+  min-height: 100vh; /* Altura mínima = 100% del viewport */
+  display: flex; /* Activa flexbox */
+  flex-direction: column; /* Organiza hijos en columna */
+  align-items: center; /* Centra horizontalmente */
+  background-color: #f8f9fa; /* Color de fondo claro */
+  color: #333; /* Color de texto principal */
+  line-height: 1.6; /* Espaciado entre líneas */
+}
+
+/* Contenedor principal */
+main {
+  width: 100%; /* Ocupa todo el ancho disponible */
+  padding: 2rem 1rem; /* Espaciado interno: 2rem arriba/abajo, 1rem izquierda/derecha */
+}
+
+/* Estilos para el título h1 */
+h1 {
+  position: relative; /* Permite posicionar pseudo-elementos */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2em 0; /* Margen 2em arriba/abajo */
+  padding-bottom: 10px; /* Espacio para la línea decorativa */
+  letter-spacing: 5px; /* Espaciado entre letras */
+  text-transform: uppercase; /* Texto en mayúsculas */
+  font-weight: 600; /* Grosor semi-negrita */
+  color: #2a4365; /* Color azul oscuro */
+}
+
+/* Línea decorativa bajo el h1 */
+h1::after {
+  content: ""; /* Necesario para pseudo-elementos */
+  position: absolute;
+  left: 50%; /* Centrado horizontal */
+  transform: translateX(-50%); /* Ajuste fino para centrado perfecto */
+  bottom: 0; /* Posición en la base del h1 */
+  width: 10%; /* Ancho relativo */
+  height: 5px; /* Grosor de la línea */
+  background-color: rgb(77, 189, 218); /* Color azul claro */
+  border-radius: 2px; /* Bordes ligeramente redondeados */
+}
+
+/* Contenedor del testimonio */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%; /* Ancho relativo */
+  max-width: 800px; /* Ancho máximo */
+  margin: 0 auto; /* Centrado horizontal */
+  padding: 2rem; /* Espaciado interno */
+  background-color: white; /* Fondo blanco */
+  border-radius: 8px; /* Esquinas redondeadas */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Contenedor del perfil */
+.profile {
+  width: 100%; /* Ancho completo */
+  text-align: center; /* Texto centrado */
+}
+
+/* Item del perfil */
+.profile__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem; /* Espacio entre elementos hijos */
+}
+
+/* Imagen de perfil */
+.profile__pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* Forma circular */
+  object-fit: cover; /* Ajuste de imagen manteniendo proporciones */
+  border: 5px solid #4dbdda; /* Borde azul */
+  box-shadow: 0 4px 8px rgba(77, 189, 218, 0.3); /* Sombra azulada */
+  margin-bottom: 1.5rem; /* Espacio inferior */
+}
+
+/* Texto del testimonio */
+.testimonial {
+  font-style: italic; /* Texto en cursiva */
+  color: #555; /* Color gris oscuro */
+  position: relative; /* Para posicionar pseudo-elementos */
+  padding: 0 1rem; /* Espaciado lateral */
+}
+
+/* Comillas decorativas antes del testimonio */
+
+.testimonial::before,
+.testimonial::after {
+  content: ""; /* Comillas */
+  font-family: Georgia, serif; /* Fuente alternativa */
+  font-size: 3rem; /* TRamano grande */
+  color: rgba(77, 189, 218, 0.2); /* Azul muy trasparente */
+  position: absolute;
+}
+
+/* Posición de la comilla inicial */
+.testimonial::before {
+  top: -1.5rem;
+  left: -0.5rem;
+}
+
+/* Posición de la comilla final */
+.testimonial::after {
+  bottom: -3rem;
+  right: -0.5rem;
+}
+
+/* Nombre del perfil */
+.profile__name {
+  font-size: 1.5rem;
+  font-weight: 700; /* Negrita */
+  color: #2b6cb0; /* Azul más intenso */
+  letter-spacing: 1px; /* Pequeño espaciado */
+  margin-top: 1rem; /* Espacio superior */
+}
+
+/* Profesión del perfil */
+.profile__career {
+  color: #4dbdda; /* Color azul claro */
+  font-weight: 600; /* Semi-negrita */
+  text-transform: uppercase; /* Mayúsculas */
+  letter-spacing: 1px; /* Espaciado entre letras */
+  font-size: 0.9rem; /* Tamaño ligeramente menor */
+  margin-bottom: 1.5rem; /* Espacio inferior */
+}
+
+/* Contenedor de controles */
+.controls {
+  display: flex;
+  gap: 1.5rem; /* Espacio entre botones */
+  justify-content: center;
+  margin: 2rem 0; /* Espacio vertical */
+}
+
+/* Estilos base para botones */
+.btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* Forma circular */
+  border: none;
+  background-color: white;
+  color: #4dbdda;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: all 0.3s ease; /* Transición suave */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Efecto hover para botones */
+.btn:hover {
+  background-color: #4dbdda;
+  color: white;
+  transform: translateY(-2px); /* Efecto de levitación */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+}
+
+/* Efecto al hacer clic */
+.btn:active {
+  transform: translateY(0); /* Vuelve a posición original */
+}
+
+/* Botón especial "Surprise Me" */
+.btn--surprise {
+  padding: 1.2rem 2.6rem; /* Espaciado interno */
+  border-radius: 50px; /* Forma ovalada */
+  background-color: #4dbdda;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  font-size: 0.7rem;
+  margin-top: 1.4rem;
+  transition: all 0.3s ease;
+}
+
+/* Efecto hover para el botón especial */
+.btn--surprise:hover {
+  background-color: #3aa8c4; /* Color más oscuro */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Media Queries para tabletas */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem; /* Tamaño menor */
+    letter-spacing: 3px; /* Menos espaciado */
+  }
+
+  h1::after {
+    width: 30%; /* Línea más ancha */
+  }
+
+  .container {
+    width: 95%; /* Más ancho */
+    padding: 1.5rem; /* Menos padding */
+  }
+
+  .profile__pic {
+    width: 120px;
+    height: 120px; /* Imagen más pequeña */
+  }
+
+  .testimonial {
+    font-size: 0.95rem; /* Texto más pequeño */
+  }
+
+  .profile__name {
+    font-size: 1.3rem; /* Tamaño ajustado */
+  }
+}
+
+/* Media Queries para móviles */
+@media (max-width: 480px) {
+  .controls {
+    gap: 1rem; /* Menos espacio entre botones */
+  }
+
+  .btn {
+    width: 36px;
+    height: 36px; /* Botones más pequeños */
+  }
+
+  .btn--surprise {
+    padding: 0.6rem 1.8rem; /* Menos padding */
+    font-size: 0.7rem; /* Texto más pequeño */
+  }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reviews Testimonials</title>
+    <!-- Título más descriptivo -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Preconexión para mejor performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+  <body>
+    <main>
+      <!-- Mejor semántica -->
+      <h1>Our Reviews</h1>
+      <div class="container">
+        <article class="profile">
+          <!-- Más semántico que "perfil" -->
+          <div class="profile__item">
+            <img
+              src="./assets/hombre.png"
+              alt="Peter Jones portrait"
+              class="profile__pic"
+              id="person-img"
+              width="150"
+              height="150"
+            />
+            <h2 id="author">Peter Jones</h2>
+            <p class="profile__career" id="job">Web Developer</p>
+            <!-- BEM -->
+            <blockquote class="testimonial">
+              <!-- Mejor semántica para citas -->
+              <p id="info">
+                Elit proident occaecat pariatur ex voluptate quis labore. Esse
+                sit reprehenderit elit aliquip deserunt occaecat fugiat sint
+                eiusmod. Ullamco commodo excepteur velit quis veniam laboris
+                officia cillum. In in aliqua dolor excepteur officia proident
+                quis incididunt elit elit culpa aute dolor. Incididunt
+                consectetur ut adipisicing id pariatur officia ullamco mollit
+                tempor ullamco. Non eu culpa minim exercitation voluptate sunt
+                ullamco do dolor laborum adipisicing mollit.
+              </p>
+            </blockquote>
+            <div class="controls">
+              <!-- Nombre más descriptivo -->
+              <button class="btn btn--prev" aria-label="Previous testimonial">
+                <i class="fa-solid fa-angle-left fa-xl" aria-hidden="true"></i>
+              </button>
+              <button class="btn btn--next" aria-label="Next testimonial">
+                <i class="fa-solid fa-angle-right fa-xl" aria-hidden="true"></i>
+              </button>
+            </div>
+            <button class="btn btn--surprise">Surprise Me</button>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <!-- Script al final del body para mejor performance -->
+    <script
+      src="https://kit.fontawesome.com/74de10ced3.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>
